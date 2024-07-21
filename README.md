@@ -16,6 +16,11 @@ Check container build status
 docker logs <container-id>
 ```
 
+Auto scroll logs
+```
+docker logs -f --tail <container-id>
+```
+
 Get interactive shell after container has started
 ```
 docker exec -it <container-id> /bin/bash
