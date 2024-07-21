@@ -51,3 +51,21 @@ Run image(s)
 ```
 docker-compose up -d
 ```
+
+## Common Issue(s):
+### Error: 
+> docker: Got permission denied while trying to connect to the Docker daemon socket at ...
+
+### Solution:
+1. Add current user to docker group
+```
+sudo usermod -aG docker $USER
+```
+2. Verify docker can be ran
+```
+docker ps -a
+```
+3. Reboot if error persist
+```
+sudo reboot
+```
