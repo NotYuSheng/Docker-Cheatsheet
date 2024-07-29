@@ -41,6 +41,11 @@ Delete all image(s)
 docker rmi -f $(docker images -aq)
 ```
 
+List volume(s)
+```
+docker volume ls
+```
+
 ## Docker-compose
 Build the Docker image(s):
 ```
