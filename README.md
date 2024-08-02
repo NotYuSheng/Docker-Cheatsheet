@@ -74,3 +74,29 @@ docker ps -a
 ```
 sudo reboot
 ```
+
+### Error:
+> docker: Error response from daemon: Container command '/EXAMPLE.sh' not found or does not exist..
+
+### Solution (1):
+Shell scripts (.sh files) may need modification for different operating systems due to differences in how these systems interpret end-of-line (EOL) characters. The primary reason for modifying .sh files across different operating systems is to ensure compatibility and correct execution of the scripts. 
+1. Download and open [Notepad++](https://notepad-plus-plus.org/downloads/):
+
+2. Go to File > Open and select the .sh file you want to modify.
+
+3. Check Current EOL Format:
+
+> Look at the status bar at the bottom of the Notepad++ window. It will show the current EOL format, such as Windows (CR LF), Unix (LF), or Macintosh (CR).
+Convert EOL Characters:
+
+4. Go to Edit > EOL Conversion in the menu bar.
+
+5. Choose the appropriate EOL format for your target environment:
+>     Windows (CR LF): Converts EOL characters to \r\n.
+>     Unix (LF): Converts EOL characters to \n.
+>     Macintosh (CR): Converts EOL characters to \r.
+
+6. Save the File
+
+### Solution (2):
+Convert the file using the `convert_eol.py` script.
