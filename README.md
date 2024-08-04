@@ -41,6 +41,16 @@ Delete all image(s)
 docker rmi -f $(docker images -aq)
 ```
 
+Remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all volumes not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+```
+docker system prune -a --volumes
+```
+
 List volume(s)
 ```
 docker volume ls
